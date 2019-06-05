@@ -10,6 +10,9 @@ COPY scripts /linux/scripts
 # Copy the Makefile into the docker filesystem
 COPY Makefile /linux/Makefile
 
+# Copy the patches directory into the docker filesystem
+COPY patches /linux/patches
+
 # Install additional packages that allow us to run the 32-bit linux add-in on a 64-bit host
 RUN  /linux/scripts/setup-64bit-ubuntu-host.sh
 
