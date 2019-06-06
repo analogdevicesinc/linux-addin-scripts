@@ -10,7 +10,7 @@
 # become your father-in-law and you will lose all sense of reality.
 
 # Options to configure
-DOCKER_IMAGE_NAME=dte-linuxaddin
+DOCKER_IMAGE_NAME=analogdevices/dte-linux-addin
 DOCKER_IMAGE_VERSION=1.3.0
 # Version of the Linux add-in to install
 LINUXADDIN_VERSION=1.3.0
