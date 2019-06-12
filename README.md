@@ -5,11 +5,17 @@ The scripts can be run on a native PC running 64-bit Ubuntu 18.04, or within the
 The docker image will contain all the scripts required to download and build the Linux add-in from source, using a 64-bit variant of Ubuntu
 
 ## Quick Start
-To build uBoot and the kernel filesystem:
+To build uBoot and the kernel/filesystem under the ADI provided docker image on Docker Hub:
 ```bash
 make all USE_DOCKER=yes
 ```
 This will pull down the **analogdevices/dte-linux-addin** docker image which will build the components, leaving the source and build components available on the host once completed.
+
+To build uBoot and the kernel/filesystem on the native host Linux machine:
+```bash
+make all
+```
+This will also leave the build products in the build directory on the local host.
 
 ## Support and Advice
 Any questions regarding this repository or the ADI Linux add-in Docker image should be post on the [Analog Devices Linux Add-in Engineer Zone Forum](https://ez.analog.com/dsp/software-and-development-tools/linux-for-adsp-sc5xx-processors/f/q-a)
