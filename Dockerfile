@@ -4,6 +4,10 @@ FROM ubuntu:18.04
 # Set the directory for building the product
 WORKDIR /linux
 
+# Copy useful information and licensing to the docker image
+COPY README.md .
+COPY LICENSE.md .
+
 # Copy in the scripts and content needed to build uBoot and the kernel
 COPY scripts /linux/scripts
 

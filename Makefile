@@ -11,7 +11,7 @@
 
 # Options to configure
 DOCKER_IMAGE_NAME=analogdevices/dte-linux-addin
-DOCKER_IMAGE_VERSION=1.3.0
+DOCKER_IMAGE_VERSION=latest
 # Version of the Linux add-in to install
 LINUXADDIN_VERSION=1.3.0
 # Version of CrossCore Embedded Studio to install
@@ -47,7 +47,7 @@ LINUX_SOURCE_DIR=$(BUILD_DIR)/linux
 DEBIAN_FRONTEND=noninteractive
 
 ifeq ($(USE_DOCKER),yes)
-  LOCAL_BUILD_COMPONENTS=docker-image invoke-docker-build
+  LOCAL_BUILD_COMPONENTS=invoke-docker-build
 else
   LOCAL_BUILD_COMPONENTS=download-packages install-packages install-sources build-uboot build-linux
 endif
@@ -67,7 +67,8 @@ all:$(LOCAL_BUILD_COMPONENTS)
 # unpack and build of all the components.
 .PHONY: invoke-docker-build
 invoke-docker-build:
-	docker run -it -v `pwd`:/linux/mount $(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_VERSION) cd /linux/mount &&  make all
+	mkdir -p build
+	docker run -v `pwd`/build:/linux/build $(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_VERSION) make all
 
 # Docker rule is only used if you are building a docker image to perform all the tasks on
 docker-image:
