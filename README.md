@@ -43,12 +43,21 @@ For example the ubuntu-18.04-linux-addin-1.3.0 branch will support building the 
 ### Pulling the official ADI docker image from docker.com
 
 ### Building a local copy of the docker image
-The image provided in this docker contain
+By default the Makefile will build using the docker repository provided by Analog Devices via the Docker Hub.
+If you wish to build a local copy of the docker repository, the Dockerfile and associated scripts in this repository will allow you to create your own version of the docker repository.
+To build a local copy of the docker image:
+1. Edit the Makefile to update the **DOCKER_IMAGE_NAME** and **DOCKER_IMAGE_VERSION** variables
+2. Invoke the following command:
+```bash
+make docker-image
+```
+Invoking the build will now use your locally built docker repository.
+The docker build creates a sub-directory on the local host named **build** which will contain all sources and artifacts from the build.
+**Note** that the Linux sources contain files that have the same name but differ in case. This means that you cannot invoke this build from a Windows host unless it is running with a case-sensitive file system. 
 
-## Setting up a Ubuntu host
-
-# Installation and Building the ADI Linux product
-
-## Installing the ADI provided tools
-
-## Building the ADI
+## Running on a native Linux host
+By default the Makefile is configured to build on a native Linux host rather than inside a docker repository.
+Before invoking make you must ensure that you have installed all the relevant packages. This can be performed by running the provided **scripts/setup-64bit-ubuntu-host.sh** script:
+```bash
+sudo ./scripts/setup-64bit-ubuntu-host.sh
+```
