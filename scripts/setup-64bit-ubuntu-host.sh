@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright Analog Devices Inc. 2019, All Rights Reserved.
+# Copyright (C) 2019 Analog Devices Inc. All Rights Reserved.
 # Script to install all the required packages needed to install the 32-bit CCES and Linux add-in packages on a 64-bit host,
 # and to install all relevant packages required to build and install Linux on the EZ-KIT
 

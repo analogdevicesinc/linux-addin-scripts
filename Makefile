@@ -1,7 +1,7 @@
 # Makefile to manage the installation and building of the ADI Linux Add-In components
 # This Makefile can be run on a native Linux host or in a docker image
 # For more information see the accompanying README.md
-# Copyright Analog Devices Inc. 2019, All Rights Reserved
+# Copyright (C) 2019 Analog Devices Inc. All Rights Reserved
 
 # To build components on the local host simply run 'make all'
 # To build a docker image and run the build on a docker image run 'make all USE_DOCKER=yes'

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright Analog Devices Inc. 2019, All Rights Reserved.
+# Copyright (C) 2019 Analog Devices Inc. All Rights Reserved.
 
 # Script to automatically install CrossCore Embedded Studio and the 
 # Linux add-in. Should be called from the top level Makefile
