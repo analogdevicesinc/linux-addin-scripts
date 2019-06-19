@@ -1,4 +1,4 @@
-This scripts, Makefile and Dockerfile provided in this repository are all 
+The scripts, Makefile and Dockerfile provided in this repository are all 
 copyright Analog Devices Inc. They are distributed using the 4-Clause BSD License provided below.
 For licensing related to the public Docker repository build from the Dockerfile please see the tern-licenses.txt file.
 The patch file for Pound (patches/0001-fix-openssl-1.0.2.patch) is copyright Apsis GmbH, and is distributed under the GPL version 3.
